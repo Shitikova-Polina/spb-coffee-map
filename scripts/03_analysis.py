@@ -43,6 +43,8 @@ def chain_status(row):
 
 
 cafes["chain"] = cafes.apply(chain_status, axis=1)
+# Сохраняем кафе вместе с признаком: карта в шаге 4 возьмёт его отсюда
+cafes.to_file(PROC / "cafes_with_chain.geojson", driver="GeoJSON")
 print("Сетевой признак по всему городу:")
 print(cafes["chain"].value_counts().to_string())
 
