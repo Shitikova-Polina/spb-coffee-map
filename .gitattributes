@@ -1,0 +1,2 @@
+# Карту генерирует скрипт, поэтому GitHub не учитывает её в статистике языков
+results/*.html linguist-generated
